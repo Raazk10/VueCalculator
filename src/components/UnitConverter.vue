@@ -42,15 +42,15 @@ export default {
 
   methods: {
     weightConverter(source) {
-      let convert = this
-        pound = convert.weightConvert[0],
-        kilogram = convert.weightConvert[1];
-		    ounce = convert.weightConvert[2],
-	  	  gram = convert.weightConvert[3]
+      let convert = this;
+      (pound = convert.weightConvert[0]), (kilogram = convert.weightConvert[1]);
+      (ounce = convert.weightConvert[2]), (gram = convert.weightConvert[3]);
 
-		  if(source=pound){
-			kilogram.input =
-		  }
+      if ((source = pound)) {
+        kilogram.input = (pound.input / 2.2046).toFixed(2);
+        ounce.input = (pound.input * 16).toFixed(2);
+        gram.input = (pound.input * 0.071429).toFixed();
+      }
     },
 
     handleInputChange() {
